@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Stil für das Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Halbtransparentes Schwarz */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden; /* Standardmäßig ausgeblendet */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Stil für das Popup */
+        .popup {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 80%; /* Maximale Breite des Popups */
+            text-align: center;
+        }
+
+        /* Wenn das Overlay durch das Ziel (z. B. einen Link) aktiviert wird */
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Ein Link, der das Popup aktiviert -->
+    <a href="#popup" class="button">Popup anzeigen</a>
+
+    <!-- Das Overlay und das Popup -->
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <h2>Willkommen im Popup!</h2>
+            <p>Hier kannst du deinen eigenen Inhalt hinzufügen.</p>
+            <a href="#" class="close">×</a> <!-- Schließen-Symbol -->
+        </div>
+    </div>
+</body>
+</html>

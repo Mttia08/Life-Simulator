@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.attributeContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.attributeLabel {
+    margin-right: 10px;
+}
+
+.attributeVariable {
+    white-space: nowrap;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.skillbarContainer {
+    width: 200px;
+    height: 15px;
+    background-color: lightgrey;
+    position: absolute;
+    margin-left: 150px;
+}
+
+.skillbar {
+    height: 100%;
+    width: 0;
+    background-color: green;
+}
+
+#age {
+    position: absolute;
+    margin-top: 0px;
+}
+
+#clubLogo {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#getOlder {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 3px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#leagueTableWindow {
+    position: fixed;
+    top: 0;
+    /* Oder die gewünschte Abstand von oben */
+    right: 0;
+    margin: 30px;
+    /* Fügt einen Abstand zum Rand hinzu */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Stil für das Popup */
+.popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    text-align: center;
+}

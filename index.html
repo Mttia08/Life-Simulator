@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="trainWindow">
+        <h1 id="age">Age</h1>
+        <button id="getOlder" onclick="getOlder()">+</button>
+
+        <img src="ManchesterCityLogo.png" alt="ClubLogo" width="50px" id="clubLogo">
+        
+        <br><br><br><br>
+        <h2 id="attributeLabel">Skills:</h2>
+        <div class="attributeContainer">
+            <div id="dribblingLabel" class="attributeLabel">Dribbling: </div>
+            <div id="dribblingVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="dribblingBar" class="skillbar"></div>
+            </div>        
+        </div>
+        
+        <div class="attributeContainer">
+            <div id="shootingLabel" class="attributeLabel">Shooting: </div>
+            <div id="shootingVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="shootingBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <div class="attributeContainer">
+            <div id="passingLabel" class="attributeLabel">Passing: </div>
+            <div id="passingVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="passingBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <div class="attributeContainer">
+            <div id="defenseLabel" class="attributeLabel">Defense: </div>
+            <div id="defenseVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="defenseBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <div class="attributeContainer">
+            <div id="physisLabel" class="attributeLabel">Physis: </div>
+            <div id="physisVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="physisBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <div class="attributeContainer">
+            <div id="paceLabel" class="attributeLabel">Pace: </div>
+            <div id="paceVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="paceBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <br><br>
+
+        <div class="attributeContainer">
+            <div id="overallLabel" class="attributeLabel">Overall: </div>
+            <div id="overallVariable" class="attributeVariable"></div>
+            <div class="skillbarContainer">
+                <div id="overallBar" class="skillbar"></div>
+            </div>   
+        </div>
+        
+        <br><br><br>
+        <label for="attributeDropdown">Select Skill:</label>
+        <select id="attributeDropdown">
+            <option value="dribbling">Dribbling</option>
+            <option value="shooting">Shooting</option>
+            <option value="passing">Passing</option>
+            <option value="defense">Defense</option>
+            <option value="physis">Physis</option>
+            <option value="pace">Pace</option>
+        </select>
+        <br><br>
+        <button  onclick="trainHTML()">Train</button>
+        <button onclick="trainAll()">Train all</button>
+    </div>
+
+
+    <div id="leagueTableWindow">
+        <table id="premierLeagueTable">
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Verein</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="rank0">1</td>
+                    <td id="club0">Manchester City</td>
+                </tr>
+                <tr>
+                    <td id="rank1">2</td>
+                    <td id="club1">Manchester United</td>
+                </tr>
+                <tr>
+                    <td id="rank2">3</td>
+                    <td id="club2">Liverpool</td>
+                </tr>
+                <tr>
+                    <td id="rank3">4</td>
+                    <td id="club3">Chelsea</td>
+                </tr>
+                <tr>
+                    <td id="rank4">5</td>
+                    <td id="club4">Arsenal</td>
+                </tr>
+                <tr>
+                    <td id="rank5">6</td>
+                    <td id="club5">Tottenham Hotspur</td>
+                </tr>
+                <tr>
+                    <td id="rank6">7</td>
+                    <td id="club6">Leicester City</td>
+                </tr>
+                <tr>
+                    <td id="rank7">8</td>
+                    <td id="club7">West Ham United</td>
+                </tr>
+                <tr>
+                    <td id="rank8">9</td>
+                    <td id="club8">Everton</td>
+                </tr>
+                <tr>
+                    <td id="rank9">10</td>
+                    <td id="club9">Leeds United</td>
+                </tr>
+                <tr>
+                    <td id="rank10">11</td>
+                    <td id="club10">Aston Villa</td>
+                </tr>
+                <tr>
+                    <td id="rank11">12</td>
+                    <td id="club11">Newcastle United</td>
+                </tr>
+                <tr>
+                    <td id="rank12">13</td>
+                    <td id="club12">Wolverhampton Wanderers</td>
+                </tr>
+                <tr>
+                    <td id="rank13">14</td>
+                    <td id="club13">Crystal Palace</td>
+                </tr>
+                <tr>
+                    <td id="rank14">15</td>
+                    <td id="club14">Brighton & Hove Albion</td>
+                </tr>
+                <tr>
+                    <td id="rank15">16</td>
+                    <td id="club15">Southampton</td>
+                </tr>
+                <tr>
+                    <td id="rank16">17</td>
+                    <td id="club16">Burnley</td>
+                </tr>
+                <tr>
+                    <td id="rank17">18</td>
+                    <td id="club17">Fulham</td>
+                </tr>
+                <tr>
+                    <td id="rank18">19</td>
+                    <td id="club18">West Bromwich Albion</td>
+                </tr>
+                <tr>
+                    <td id="rank19">20</td>
+                    <td id="club19">Sheffield United</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <h2 id="popupTitle"></h2>
+            <p id="popupText"></p>
+            <img alt="Image" id="popupImage" style="width: 150px;">
+            <a href="#" class="close" onclick="hidePopup()">&times;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
